@@ -14,4 +14,9 @@ class TasksController < ApplicationController
     task.save
     redirect_to "/tasks"
   end
+
+  def show
+    binding.pry
+    @task = Task.find(params[:id])
+  end
 end
